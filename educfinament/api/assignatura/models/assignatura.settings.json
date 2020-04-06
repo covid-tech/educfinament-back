@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "assignatures",
+  "info": {
+    "name": "Assignatura"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "activitats": {
+      "unique": true,
+      "collection": "activitat"
+    },
+    "alumnesProfessors": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

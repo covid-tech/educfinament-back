@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/assignaturas",
+      "handler": "assignatura.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assignaturas/count",
+      "handler": "assignatura.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assignaturas/:id",
+      "handler": "assignatura.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/assignaturas",
+      "handler": "assignatura.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/assignaturas/:id",
+      "handler": "assignatura.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/assignaturas/:id",
+      "handler": "assignatura.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

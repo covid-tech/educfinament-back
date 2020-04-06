@@ -1,0 +1,23 @@
+{
+  "name": "educfinament-back",
+  "version": "1.0.0",
+  "description": "Aplicació per facilitar la formació a les escoles catalanes durant el confinament",
+  "main": "index.js",
+  "dependencies": {
+    "npx": "^10.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/covid-tech/educfinament-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/covid-tech/educfinament-back/issues"
+  },
+  "homepage": "https://github.com/covid-tech/educfinament-back#readme"
+}
