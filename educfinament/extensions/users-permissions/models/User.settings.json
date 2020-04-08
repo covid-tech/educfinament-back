@@ -59,6 +59,16 @@
     },
     "cognoms": {
       "type": "string"
+    },
+    "imatgePerfil": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "centres": {
+      "via": "alumnesProfessors",
+      "collection": "centre"
     }
   }
 }

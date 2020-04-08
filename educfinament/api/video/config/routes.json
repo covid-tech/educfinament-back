@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/curs",
-      "handler": "curs.find",
+      "path": "/videos",
+      "handler": "video.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/curs/count",
-      "handler": "curs.count",
+      "path": "/videos/count",
+      "handler": "video.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/curs/:id",
-      "handler": "curs.findOne",
+      "path": "/videos/:id",
+      "handler": "video.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/curs",
-      "handler": "curs.create",
+      "path": "/videos",
+      "handler": "video.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/curs/:id",
-      "handler": "curs.update",
+      "path": "/videos/:id",
+      "handler": "video.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/curs/:id",
-      "handler": "curs.delete",
+      "path": "/videos/:id",
+      "handler": "video.delete",
       "config": {
         "policies": []
       }

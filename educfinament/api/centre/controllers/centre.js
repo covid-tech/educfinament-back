@@ -5,4 +5,8 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {    
+    async find(ctx) {
+        return await strapi.query("centre").find({}, ['assignatures']);
+    }
+};

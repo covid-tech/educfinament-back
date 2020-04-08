@@ -15,6 +15,12 @@
     },
     "descripcio": {
       "type": "text"
+    },
+    "videosAlumnes": {
+      "collection": "video"
+    },
+    "videoExplicacio": {
+      "model": "video"
     }
   }
 }

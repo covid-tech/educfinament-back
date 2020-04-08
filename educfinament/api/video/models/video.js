@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `curs` model.
+ * Lifecycle callbacks for the `video` model.
  */
 
 module.exports = {

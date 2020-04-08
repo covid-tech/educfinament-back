@@ -15,8 +15,14 @@
       "required": true,
       "unique": true
     },
-    "cursos": {
-      "collection": "curs"
+    "alumnesProfessors": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "centres",
+      "dominant": true
+    },
+    "assignatures": {
+      "collection": "assignatura"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "videos",
+  "info": {
+    "name": "Video"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "descripcio": {
+      "type": "text"
+    },
+    "urlVideo": {
+      "type": "string"
+    },
+    "urlThumbnail": {
+      "type": "string"
+    },
+    "validat": {
+      "type": "boolean"
+    },
+    "enviatPer": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
