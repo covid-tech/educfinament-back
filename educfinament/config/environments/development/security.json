@@ -22,7 +22,7 @@
   },
   "cors": {
     "enabled": true,
-    "origin": "*"
+    "origin": "http://localhost:1337"
   },
   "ip": {
     "enabled": false,
