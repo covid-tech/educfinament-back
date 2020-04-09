@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/assignaturas",
-      "handler": "assignatura.find",
+      "path": "/grups",
+      "handler": "grup.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/assignaturas/count",
-      "handler": "assignatura.count",
+      "path": "/grups/count",
+      "handler": "grup.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/assignaturas/:id",
-      "handler": "assignatura.findOne",
+      "path": "/grups/:id",
+      "handler": "grup.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/assignaturas",
-      "handler": "assignatura.create",
+      "path": "/grups",
+      "handler": "grup.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/assignaturas/:id",
-      "handler": "assignatura.update",
+      "path": "/grups/:id",
+      "handler": "grup.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/assignaturas/:id",
-      "handler": "assignatura.delete",
+      "path": "/grups/:id",
+      "handler": "grup.delete",
       "config": {
         "policies": []
       }

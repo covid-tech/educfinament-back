@@ -66,9 +66,9 @@
       "plugin": "upload",
       "required": false
     },
-    "centres": {
-      "via": "alumnesProfessors",
-      "collection": "centre"
+    "organitzacions": {
+      "via": "participants",
+      "collection": "organitzacio"
     }
   }
 }

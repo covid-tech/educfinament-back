@@ -7,10 +7,9 @@
 
 module.exports = {
     async find(ctx) {
-        return await strapi.query("activitat").find({}, ['videos']);
+        return await strapi.query("grup").find({}, ['activitats']);
     }, 
     async findOne(ctx) {
-        //return ctx.req.params
-        return await strapi.query("activitat").findOne({id:ctx.params.id}, ['videos']);
+        return await strapi.query("grup").findOne({id:ctx.params.id}, ['activitats']);
     }
 };

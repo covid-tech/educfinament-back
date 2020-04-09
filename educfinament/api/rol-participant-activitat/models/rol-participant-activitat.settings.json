@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "rolParticipantActivitat",
+  "info": {
+    "name": "RolParticipant-Activitat"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "activitat": {
+      "model": "activitat"
+    },
+    "participant": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "rol": {
+      "plugin": "users-permissions",
+      "model": "role"
+    }
+  }
+}

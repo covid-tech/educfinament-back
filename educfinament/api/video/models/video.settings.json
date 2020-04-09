@@ -25,6 +25,19 @@
     "enviatPer": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "dataPublicacio": {
+      "type": "datetime"
+    },
+    "activitat": {
+      "model": "activitat"
+    },
+    "copsVist": {
+      "type": "integer"
+    },
+    "visitants": {
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }

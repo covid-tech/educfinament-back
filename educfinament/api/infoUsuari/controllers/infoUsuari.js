@@ -13,10 +13,10 @@ module.exports = {
             password: ctx.request.body.pass,
         })
         .then(async response => {
-            let centres = response.data.user.centres;
-            centres = await strapi.query("centre").find({id_in:centres.map(x => x.id)}, [
-                'nom','assignatures','assignatures.activitats','assignatures.alumnesProfessors','assignatures.activitats.videosAlumnes',
-                'assignatures.alumnesProfessors.nom','assignatures.alumnesProfessors.cognoms','assignatures.alumnesProfessors.username'
+            let organitzacions = response.data.user.organitzacions;
+            organitzacions = await strapi.query("organitzacio").find({id_in:organitzacions.map(x => x.id)}, [
+                'nom','grups','grups.activitats','grups.alumnesProfessors','grups.activitats.videosAlumnes',
+                'grups.alumnesProfessors.nom','grups.alumnesProfessors.cognoms','grups.alumnesProfessors.username'
             ]);
 
             let resposta = {
@@ -24,7 +24,7 @@ module.exports = {
                 usuari: response.data.user
             };
 
-            resposta.usuari.centres = centres;
+            resposta.usuari.organitzacions = organitzacions;
 
             return resposta;
         })

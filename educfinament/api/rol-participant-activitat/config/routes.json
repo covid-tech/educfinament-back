@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rol-participant-activitats",
+      "handler": "rol-participant-activitat.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rol-participant-activitats/count",
+      "handler": "rol-participant-activitat.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rol-participant-activitats/:id",
+      "handler": "rol-participant-activitat.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rol-participant-activitats",
+      "handler": "rol-participant-activitat.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rol-participant-activitats/:id",
+      "handler": "rol-participant-activitat.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rol-participant-activitats/:id",
+      "handler": "rol-participant-activitat.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

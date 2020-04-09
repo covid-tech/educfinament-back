@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "centres",
+  "collectionName": "grups",
   "info": {
-    "name": "Centre"
+    "name": "Grup"
   },
   "options": {
     "increments": true,
@@ -15,14 +15,13 @@
       "required": true,
       "unique": true
     },
-    "alumnesProfessors": {
-      "plugin": "users-permissions",
-      "collection": "user",
-      "via": "centres",
-      "dominant": true
+    "activitats": {
+      "unique": true,
+      "collection": "activitat"
     },
-    "assignatures": {
-      "collection": "assignatura"
+    "participants": {
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }

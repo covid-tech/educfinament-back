@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/centres",
-      "handler": "centre.find",
+      "path": "/organitzacions",
+      "handler": "organitzacio.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/centres/count",
-      "handler": "centre.count",
+      "path": "/organitzacions/count",
+      "handler": "organitzacio.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/centres/:id",
-      "handler": "centre.findOne",
+      "path": "/organitzacions/:id",
+      "handler": "organitzacio.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/centres",
-      "handler": "centre.create",
+      "path": "/organitzacions",
+      "handler": "organitzacio.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/centres/:id",
-      "handler": "centre.update",
+      "path": "/organitzacions/:id",
+      "handler": "organitzacio.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/centres/:id",
-      "handler": "centre.delete",
+      "path": "/organitzacions/:id",
+      "handler": "organitzacio.delete",
       "config": {
         "policies": []
       }

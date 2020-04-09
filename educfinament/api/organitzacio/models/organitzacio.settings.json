@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "assignatures",
+  "collectionName": "organitzacions",
   "info": {
-    "name": "Assignatura"
+    "name": "Organitzacio"
   },
   "options": {
     "increments": true,
@@ -15,13 +15,14 @@
       "required": true,
       "unique": true
     },
-    "activitats": {
-      "unique": true,
-      "collection": "activitat"
-    },
-    "alumnesProfessors": {
+    "participants": {
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "organitzacions",
+      "dominant": true
+    },
+    "grups": {
+      "collection": "grup"
     }
   }
 }

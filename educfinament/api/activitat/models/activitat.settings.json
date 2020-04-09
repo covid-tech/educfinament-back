@@ -10,17 +10,74 @@
     "timestamps": true
   },
   "attributes": {
-    "nom": {
+    "titol": {
       "type": "string"
     },
-    "descripcio": {
+    "objectius": {
       "type": "text"
     },
-    "videosAlumnes": {
+    "videos": {
       "collection": "video"
     },
-    "videoExplicacio": {
+    "videoInici": {
       "model": "video"
+    },
+    "dataPublicacio": {
+      "type": "datetime"
+    },
+    "dataFinalitzacio": {
+      "type": "datetime"
+    },
+    "publicada": {
+      "type": "boolean"
+    },
+    "color": {
+      "type": "string"
+    },
+    "grup": {
+      "model": "grup"
+    },
+    "imatgeVideoInici": {
+      "type": "string"
+    },
+    "materials": {
+      "type": "text"
+    },
+    "criterisAvaluacio": {
+      "type": "text"
+    },
+    "imatgeVideoFi": {
+      "type": "string"
+    },
+    "observacionsFi": {
+      "type": "text"
+    },
+    "calValidacio": {
+      "type": "boolean"
+    },
+    "copsVista": {
+      "type": "integer"
+    },
+    "visitants": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "participants": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "videoFi": {
+      "model": "video"
+    },
+    "codiInvitacioProfessor": {
+      "type": "uid",
+      "minLength": 6,
+      "maxLength": 6
+    },
+    "codiInvitacioAlumne": {
+      "type": "uid",
+      "maxLength": 6,
+      "minLength": 6
     }
   }
 }
