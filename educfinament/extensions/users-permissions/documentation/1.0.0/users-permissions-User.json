@@ -1319,6 +1319,9 @@
                 }
               }
             }
+          },
+          "dataNaixement": {
+            "type": "string"
           }
         }
       },
@@ -1365,6 +1368,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "dataNaixement": {
+            "type": "string"
           }
         }
       }

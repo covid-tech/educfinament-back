@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/10/2020 5:00:04 PM"
+    "x-generation-date": "04/10/2020 5:47:33 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -22,10 +22,6 @@
     "generateDefaultResponse": true
   },
   "servers": [
-    {
-      "url": "http://educfinament.albiasoft.com:1337",
-      "description": "Development server"
-    },
     {
       "url": "http://localhost:1337",
       "description": "Development server"
@@ -5245,6 +5241,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "dataNaixement": {
+                "type": "string"
               }
             }
           },
@@ -5517,6 +5516,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "dataNaixement": {
+                "type": "string"
               }
             }
           }
@@ -5597,6 +5599,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "dataNaixement": {
+                  "type": "string"
                 }
               }
             }
@@ -5768,6 +5773,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "dataNaixement": {
+                "type": "string"
               }
             }
           },
@@ -5883,6 +5891,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "dataNaixement": {
+                "type": "string"
               }
             }
           },
@@ -6010,6 +6021,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "dataNaixement": {
+                "type": "string"
               }
             }
           }
@@ -6147,6 +6161,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "dataNaixement": {
+                  "type": "string"
                 }
               }
             }
@@ -6317,6 +6334,9 @@
                 }
               }
             }
+          },
+          "dataNaixement": {
+            "type": "string"
           }
         }
       },
@@ -6363,6 +6383,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "dataNaixement": {
+            "type": "string"
           }
         }
       },

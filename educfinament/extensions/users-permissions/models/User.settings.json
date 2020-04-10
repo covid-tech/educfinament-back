@@ -66,6 +66,9 @@
     "organitzacions": {
       "collection": "organitzacio",
       "via": "participants"
+    },
+    "dataNaixement": {
+      "type": "date"
     }
   }
 }
