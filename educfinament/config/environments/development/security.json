@@ -22,7 +22,7 @@
   },
   "cors": {
     "enabled": true,
-    "origin": "http://127.0.0.1:8100,http://127.0.0.1,http://localhost:8100,http://localhost,http://educfinament.albiasoft.com:1337" 
+    "origin": "ionic://localhost,http://127.0.0.1:8100,http://127.0.0.1,http://localhost:8100,http://localhost,http://educfinament.albiasoft.com:1337" 
   },
   "ip": {
     "enabled": false,
