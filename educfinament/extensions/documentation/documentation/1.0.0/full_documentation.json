@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/10/2020 2:53:29 PM"
+    "x-generation-date": "04/10/2020 5:00:04 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -24,6 +24,10 @@
   "servers": [
     {
       "url": "http://educfinament.albiasoft.com:1337",
+      "description": "Development server"
+    },
+    {
+      "url": "http://localhost:1337",
       "description": "Development server"
     },
     {
@@ -6415,4 +6419,8 @@
       "name": "UsersPermissions - User"
     }
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 371b4ad5a5b85fa87118ac3ffa4f9a0e37c4e2e7
