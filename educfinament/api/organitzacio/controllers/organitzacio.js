@@ -7,10 +7,10 @@
 
 module.exports = {    
     async find(ctx) {
-        return await strapi.query("organitzacio").find({}, ['grups']);
+        return await strapi.query("organitzacio").find({}, ['grups','alumnes','professors']);
     }, 
     async findOne(ctx) {
-        return await strapi.query("organitzacio").findOne({id:ctx.params.id}, ['grups']);
+        return await strapi.query("organitzacio").findOne({id:ctx.params.id}, ['grups','alumnes','professors']);
     }
 
 };

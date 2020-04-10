@@ -574,14 +574,14 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "dataNaixement": {
-                "type": "string"
               }
             }
           },
@@ -629,7 +629,7 @@
               "materials": {
                 "type": "string"
               },
-              "criterisAvaluacio": {
+              "criteriAvaluacioMoltBe": {
                 "type": "string"
               },
               "imatgeVideoFi": {
@@ -647,9 +647,6 @@
               "visitants": {
                 "type": "string"
               },
-              "participants": {
-                "type": "string"
-              },
               "videoFi": {
                 "type": "string"
               },
@@ -658,6 +655,24 @@
               },
               "codiInvitacioAlumne": {
                 "type": "uid"
+              },
+              "criteriAvaluacioBe": {
+                "type": "string"
+              },
+              "criteriAvaluacioFluix": {
+                "type": "string"
+              },
+              "criteriAvaluacioNoAssolit": {
+                "type": "string"
+              },
+              "alumnes": {
+                "type": "string"
+              },
+              "professors": {
+                "type": "string"
+              },
+              "esPrivada": {
+                "type": "boolean"
               }
             }
           },
@@ -704,14 +719,14 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "dataNaixement": {
-                "type": "string"
               }
             }
           }

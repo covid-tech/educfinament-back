@@ -15,6 +15,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/infoUsuari/:id",
+      "handler": "infoUsuari.obtenirArbre",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

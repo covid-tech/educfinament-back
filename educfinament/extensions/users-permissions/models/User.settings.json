@@ -63,12 +63,12 @@
       "plugin": "upload",
       "required": false
     },
-    "organitzacions": {
-      "collection": "organitzacio",
-      "via": "participants"
-    },
     "dataNaixement": {
       "type": "date"
+    },
+    "organitzacions": {
+      "via": "professors",
+      "collection": "organitzacio"
     }
   }
 }

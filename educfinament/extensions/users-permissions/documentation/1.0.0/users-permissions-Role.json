@@ -615,14 +615,14 @@
                 "imatgePerfil": {
                   "type": "string"
                 },
+                "dataNaixement": {
+                  "type": "string"
+                },
                 "organitzacions": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "dataNaixement": {
-                  "type": "string"
                 }
               }
             }

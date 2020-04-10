@@ -15,14 +15,20 @@
       "required": true,
       "unique": true
     },
-    "participants": {
-      "via": "organitzacions",
+    "alumnes": {
       "plugin": "users-permissions",
       "collection": "user",
+      "via": "organitzacions",
       "dominant": true
     },
     "grups": {
       "collection": "grup"
+    },
+    "professors": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "organitzacions",
+      "dominant": true
     }
   }
 }

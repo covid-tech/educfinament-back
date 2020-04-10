@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/10/2020 5:47:33 PM"
+    "x-generation-date": "04/10/2020 7:23:10 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1351,6 +1351,74 @@
         }
       }
     },
+    "/infoUsuari/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Infousuari"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/organitzacions": {
       "get": {
         "deprecated": false,
@@ -1847,530 +1915,6 @@
         "summary": "",
         "tags": [
           "Organitzacio"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/rol-participant-activitats": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Rol-participant-activitat"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Rol-participant-activitat"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewRol-participant-activitat"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/rol-participant-activitats/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Rol-participant-activitat"
-        ],
-        "parameters": []
-      }
-    },
-    "/rol-participant-activitats/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Rol-participant-activitat"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Rol-participant-activitat"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewRol-participant-activitat"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Rol-participant-activitat"
         ],
         "parameters": [
           {
@@ -5170,7 +4714,10 @@
               "activitats": {
                 "type": "string"
               },
-              "participants": {
+              "alumnes": {
+                "type": "string"
+              },
+              "professors": {
                 "type": "string"
               }
             }
@@ -5181,7 +4728,7 @@
           "materials": {
             "type": "string"
           },
-          "criterisAvaluacio": {
+          "criteriAvaluacioMoltBe": {
             "type": "string"
           },
           "imatgeVideoFi": {
@@ -5236,33 +4783,14 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "dataNaixement": {
-                "type": "string"
-              }
-            }
-          },
-          "participants": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "activitat": {
-                "type": "string"
-              },
-              "participant": {
-                "type": "string"
-              },
-              "rol": {
-                "type": "string"
               }
             }
           },
@@ -5304,14 +4832,124 @@
             }
           },
           "codiInvitacioProfessor": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
           },
           "codiInvitacioAlumne": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
+          },
+          "criteriAvaluacioBe": {
+            "type": "string"
+          },
+          "criteriAvaluacioFluix": {
+            "type": "string"
+          },
+          "criteriAvaluacioNoAssolit": {
+            "type": "string"
+          },
+          "alumnes": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nom": {
+                "type": "string"
+              },
+              "imatgePerfil": {
+                "type": "string"
+              },
+              "dataNaixement": {
+                "type": "string"
+              },
+              "organitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "professors": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nom": {
+                "type": "string"
+              },
+              "imatgePerfil": {
+                "type": "string"
+              },
+              "dataNaixement": {
+                "type": "string"
+              },
+              "organitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "esPrivada": {
+            "type": "boolean"
           }
         }
       },
@@ -5350,7 +4988,7 @@
           "materials": {
             "type": "string"
           },
-          "criterisAvaluacio": {
+          "criteriAvaluacioMoltBe": {
             "type": "string"
           },
           "imatgeVideoFi": {
@@ -5368,21 +5006,32 @@
           "visitants": {
             "type": "string"
           },
-          "participants": {
-            "type": "string"
-          },
           "videoFi": {
             "type": "string"
           },
           "codiInvitacioProfessor": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
           },
           "codiInvitacioAlumne": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
+          },
+          "criteriAvaluacioBe": {
+            "type": "string"
+          },
+          "criteriAvaluacioFluix": {
+            "type": "string"
+          },
+          "criteriAvaluacioNoAssolit": {
+            "type": "string"
+          },
+          "alumnes": {
+            "type": "string"
+          },
+          "professors": {
+            "type": "string"
+          },
+          "esPrivada": {
+            "type": "boolean"
           }
         }
       },
@@ -5439,7 +5088,7 @@
               "materials": {
                 "type": "string"
               },
-              "criterisAvaluacio": {
+              "criteriAvaluacioMoltBe": {
                 "type": "string"
               },
               "imatgeVideoFi": {
@@ -5457,9 +5106,6 @@
               "visitants": {
                 "type": "string"
               },
-              "participants": {
-                "type": "string"
-              },
               "videoFi": {
                 "type": "string"
               },
@@ -5468,10 +5114,28 @@
               },
               "codiInvitacioAlumne": {
                 "type": "uid"
+              },
+              "criteriAvaluacioBe": {
+                "type": "string"
+              },
+              "criteriAvaluacioFluix": {
+                "type": "string"
+              },
+              "criteriAvaluacioNoAssolit": {
+                "type": "string"
+              },
+              "alumnes": {
+                "type": "string"
+              },
+              "professors": {
+                "type": "string"
+              },
+              "esPrivada": {
+                "type": "boolean"
               }
             }
           },
-          "participants": {
+          "alumnes": {
             "required": [
               "id",
               "username",
@@ -5511,14 +5175,65 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "professors": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nom": {
+                "type": "string"
+              },
+              "imatgePerfil": {
+                "type": "string"
               },
               "dataNaixement": {
                 "type": "string"
+              },
+              "organitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -5535,7 +5250,10 @@
           "activitats": {
             "type": "string"
           },
-          "participants": {
+          "alumnes": {
+            "type": "string"
+          },
+          "professors": {
             "type": "string"
           }
         }
@@ -5552,7 +5270,7 @@
           "nom": {
             "type": "string"
           },
-          "participants": {
+          "alumnes": {
             "type": "array",
             "items": {
               "required": [
@@ -5594,14 +5312,14 @@
                 "imatgePerfil": {
                   "type": "string"
                 },
+                "dataNaixement": {
+                  "type": "string"
+                },
                 "organitzacions": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "dataNaixement": {
-                  "type": "string"
                 }
               }
             }
@@ -5621,8 +5339,65 @@
               "activitats": {
                 "type": "string"
               },
-              "participants": {
+              "alumnes": {
                 "type": "string"
+              },
+              "professors": {
+                "type": "string"
+              }
+            }
+          },
+          "professors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "dataNaixement": {
+                  "type": "string"
+                },
+                "organitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -5636,7 +5411,7 @@
           "nom": {
             "type": "string"
           },
-          "participants": {
+          "alumnes": {
             "type": "array",
             "items": {
               "type": "string"
@@ -5644,185 +5419,12 @@
           },
           "grups": {
             "type": "string"
-          }
-        }
-      },
-      "Rol-participant-activitat": {
-        "required": [
-          "id"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
           },
-          "activitat": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "titol": {
-                "type": "string"
-              },
-              "objectius": {
-                "type": "string"
-              },
-              "videos": {
-                "type": "string"
-              },
-              "videoInici": {
-                "type": "string"
-              },
-              "dataPublicacio": {
-                "type": "datetime"
-              },
-              "dataFinalitzacio": {
-                "type": "datetime"
-              },
-              "publicada": {
-                "type": "boolean"
-              },
-              "color": {
-                "type": "string"
-              },
-              "grup": {
-                "type": "string"
-              },
-              "imatgeVideoInici": {
-                "type": "string"
-              },
-              "materials": {
-                "type": "string"
-              },
-              "criterisAvaluacio": {
-                "type": "string"
-              },
-              "imatgeVideoFi": {
-                "type": "string"
-              },
-              "observacionsFi": {
-                "type": "string"
-              },
-              "calValidacio": {
-                "type": "boolean"
-              },
-              "copsVista": {
-                "type": "integer"
-              },
-              "visitants": {
-                "type": "string"
-              },
-              "participants": {
-                "type": "string"
-              },
-              "videoFi": {
-                "type": "string"
-              },
-              "codiInvitacioProfessor": {
-                "type": "uid"
-              },
-              "codiInvitacioAlumne": {
-                "type": "uid"
-              }
+          "professors": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
-          },
-          "participant": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "nom": {
-                "type": "string"
-              },
-              "imatgePerfil": {
-                "type": "string"
-              },
-              "organitzacions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "dataNaixement": {
-                "type": "string"
-              }
-            }
-          },
-          "rol": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              },
-              "permissions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewRol-participant-activitat": {
-        "properties": {
-          "activitat": {
-            "type": "string"
-          },
-          "participant": {
-            "type": "string"
-          },
-          "rol": {
-            "type": "string"
           }
         }
       },
@@ -5886,14 +5488,14 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "dataNaixement": {
-                "type": "string"
               }
             }
           },
@@ -5941,7 +5543,7 @@
               "materials": {
                 "type": "string"
               },
-              "criterisAvaluacio": {
+              "criteriAvaluacioMoltBe": {
                 "type": "string"
               },
               "imatgeVideoFi": {
@@ -5959,9 +5561,6 @@
               "visitants": {
                 "type": "string"
               },
-              "participants": {
-                "type": "string"
-              },
               "videoFi": {
                 "type": "string"
               },
@@ -5970,6 +5569,24 @@
               },
               "codiInvitacioAlumne": {
                 "type": "uid"
+              },
+              "criteriAvaluacioBe": {
+                "type": "string"
+              },
+              "criteriAvaluacioFluix": {
+                "type": "string"
+              },
+              "criteriAvaluacioNoAssolit": {
+                "type": "string"
+              },
+              "alumnes": {
+                "type": "string"
+              },
+              "professors": {
+                "type": "string"
+              },
+              "esPrivada": {
+                "type": "boolean"
               }
             }
           },
@@ -6016,14 +5633,14 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "dataNaixement": {
-                "type": "string"
               }
             }
           }
@@ -6156,14 +5773,14 @@
                 "imatgePerfil": {
                   "type": "string"
                 },
+                "dataNaixement": {
+                  "type": "string"
+                },
                 "organitzacions": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "dataNaixement": {
-                  "type": "string"
                 }
               }
             }
@@ -6309,6 +5926,9 @@
               }
             }
           },
+          "dataNaixement": {
+            "type": "string"
+          },
           "organitzacions": {
             "type": "array",
             "items": {
@@ -6323,7 +5943,7 @@
                 "nom": {
                   "type": "string"
                 },
-                "participants": {
+                "alumnes": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -6331,12 +5951,15 @@
                 },
                 "grups": {
                   "type": "string"
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
-          },
-          "dataNaixement": {
-            "type": "string"
           }
         }
       },
@@ -6378,14 +6001,14 @@
           "nom": {
             "type": "string"
           },
+          "dataNaixement": {
+            "type": "string"
+          },
           "organitzacions": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "dataNaixement": {
-            "type": "string"
           }
         }
       },

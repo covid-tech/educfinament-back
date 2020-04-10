@@ -771,7 +771,10 @@
               "activitats": {
                 "type": "string"
               },
-              "participants": {
+              "alumnes": {
+                "type": "string"
+              },
+              "professors": {
                 "type": "string"
               }
             }
@@ -782,7 +785,7 @@
           "materials": {
             "type": "string"
           },
-          "criterisAvaluacio": {
+          "criteriAvaluacioMoltBe": {
             "type": "string"
           },
           "imatgeVideoFi": {
@@ -837,33 +840,14 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "dataNaixement": {
-                "type": "string"
-              }
-            }
-          },
-          "participants": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "activitat": {
-                "type": "string"
-              },
-              "participant": {
-                "type": "string"
-              },
-              "rol": {
-                "type": "string"
               }
             }
           },
@@ -905,14 +889,124 @@
             }
           },
           "codiInvitacioProfessor": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
           },
           "codiInvitacioAlumne": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
+          },
+          "criteriAvaluacioBe": {
+            "type": "string"
+          },
+          "criteriAvaluacioFluix": {
+            "type": "string"
+          },
+          "criteriAvaluacioNoAssolit": {
+            "type": "string"
+          },
+          "alumnes": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nom": {
+                "type": "string"
+              },
+              "imatgePerfil": {
+                "type": "string"
+              },
+              "dataNaixement": {
+                "type": "string"
+              },
+              "organitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "professors": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nom": {
+                "type": "string"
+              },
+              "imatgePerfil": {
+                "type": "string"
+              },
+              "dataNaixement": {
+                "type": "string"
+              },
+              "organitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "esPrivada": {
+            "type": "boolean"
           }
         }
       },
@@ -951,7 +1045,7 @@
           "materials": {
             "type": "string"
           },
-          "criterisAvaluacio": {
+          "criteriAvaluacioMoltBe": {
             "type": "string"
           },
           "imatgeVideoFi": {
@@ -969,21 +1063,32 @@
           "visitants": {
             "type": "string"
           },
-          "participants": {
-            "type": "string"
-          },
           "videoFi": {
             "type": "string"
           },
           "codiInvitacioProfessor": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
           },
           "codiInvitacioAlumne": {
-            "type": "uid",
-            "maxLength": 6,
-            "minLength": 6
+            "type": "uid"
+          },
+          "criteriAvaluacioBe": {
+            "type": "string"
+          },
+          "criteriAvaluacioFluix": {
+            "type": "string"
+          },
+          "criteriAvaluacioNoAssolit": {
+            "type": "string"
+          },
+          "alumnes": {
+            "type": "string"
+          },
+          "professors": {
+            "type": "string"
+          },
+          "esPrivada": {
+            "type": "boolean"
           }
         }
       }
