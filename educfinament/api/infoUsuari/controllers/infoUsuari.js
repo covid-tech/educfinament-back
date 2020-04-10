@@ -13,20 +13,8 @@ module.exports = {
             password: ctx.request.body.pass,
         })
         .then(async response => {
-            let organitzacions = response.data.user.organitzacions;
-            organitzacions = await strapi.query("organitzacio").find({id_in:organitzacions.map(x => x.id)}, [
-                'nom','grups','grups.activitats','grups.alumnesProfessors','grups.activitats.videosAlumnes',
-                'grups.alumnesProfessors.nom','grups.alumnesProfessors.cognoms','grups.alumnesProfessors.username'
-            ]);
-
-            let resposta = {
-                jwt: response.data.jwt,
-                usuari: response.data.user
-            };
-
-            resposta.usuari.organitzacions = organitzacions;
-
-            return resposta;
+            delete response.data.user.organitzacions;
+            return response.data;
         })
         .catch(error => {
             return error;
@@ -34,9 +22,7 @@ module.exports = {
     },
 
     async registre(ctx) {
-        let rol;
-        if(ctx.request.body.esProfessor) rol = await strapi.query('role', 'users-permissions').findOne({name:'Professor'},['name']);
-        else rol = await strapi.query('role', 'users-permissions').findOne({name:'Alumne'},['name']);
+        let rol = await strapi.query('role', 'users-permissions').findOne({name:'Participant'},['name']);
 
         ctx.request.body.role = rol;
 
@@ -57,5 +43,37 @@ module.exports = {
           // Handle error.
           console.log('An error occurred:', error);
         });
+    },
+
+    async obtenirArbre(ctx) {
+        return await strapi.query('user', 'users-permissions').findOne({id: ctx.params.id}, ["organitzacions", "imatgePerfil"])
+        .then(async user => {
+            for(let i=0; i<user.organitzacions.length; i++) {
+                user.organitzacions[i].grups = await strapi.services.grup.find({'professors.id': user.id},[
+                    "id","nom","activitats","alumnes","professors","alumnes.imatgePerfil","professors.imatgePerfil"
+                ]);
+
+                user.organitzacions[i].grups = user.organitzacions[i].grups.concat(
+                    await strapi.services.grup.find({'alumnes.id': user.id},[
+                        "id","nom","activitats","alumnes","professors","alumnes.imatgePerfil","professors.imatgePerfil"
+                    ])
+                );
+
+                for(let k=0; k<user.organitzacions[i].grups.length;k++) {
+                    user.organitzacions[i].grups[k].activitats = await strapi.services.activitat.find({'professors.id': user.id},[
+                        "id","nom","alumnes","professors","alumnes","professors","alumnes.imatgePerfil","professors.imatgePerfil"
+                    ]);
+
+                    user.organitzacions[i].grups[k].activitats = user.organitzacions[i].grups[k].activitats.concat(
+                        await strapi.services.activitat.find({'alumnes.id': user.id},[
+                            "id","nom","alumnes","professors","alumnes","professors","alumnes.imatgePerfil","professors.imatgePerfil"
+                        ])
+                    );
+                } 
+            }
+
+            return user;
+        })
+        
     }
 };

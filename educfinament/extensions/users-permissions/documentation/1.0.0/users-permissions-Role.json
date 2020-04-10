@@ -615,6 +615,9 @@
                 "imatgePerfil": {
                   "type": "string"
                 },
+                "dataNaixement": {
+                  "type": "string"
+                },
                 "organitzacions": {
                   "type": "array",
                   "items": {

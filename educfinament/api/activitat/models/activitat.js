@@ -1,4 +1,5 @@
 'use strict';
+const uuid = require('uuid');
 
 /**
  * Lifecycle callbacks for the `activitat` model.
@@ -31,7 +32,10 @@ module.exports = {
 
   // Before creating a value.
   // Fired before an `insert` query.
-  // beforeCreate: async (model, attrs, options) => {},
+  beforeCreate: async (model, attrs, options) => {    
+    model.set('codiInvitacioAlumne', uuid());
+    model.set('codiInvitacioProfessor', uuid());
+  },
 
   // After creating a value.
   // Fired after an `insert` query.

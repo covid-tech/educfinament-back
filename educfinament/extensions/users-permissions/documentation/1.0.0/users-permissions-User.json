@@ -1294,6 +1294,9 @@
               }
             }
           },
+          "dataNaixement": {
+            "type": "string"
+          },
           "organitzacions": {
             "type": "array",
             "items": {
@@ -1308,7 +1311,7 @@
                 "nom": {
                   "type": "string"
                 },
-                "participants": {
+                "alumnes": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -1316,6 +1319,12 @@
                 },
                 "grups": {
                   "type": "string"
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -1358,6 +1367,9 @@
             "type": "string"
           },
           "nom": {
+            "type": "string"
+          },
+          "dataNaixement": {
             "type": "string"
           },
           "organitzacions": {

@@ -574,6 +574,9 @@
               "imatgePerfil": {
                 "type": "string"
               },
+              "dataNaixement": {
+                "type": "string"
+              },
               "organitzacions": {
                 "type": "array",
                 "items": {
@@ -626,7 +629,7 @@
               "materials": {
                 "type": "string"
               },
-              "criterisAvaluacio": {
+              "criteriAvaluacioMoltBe": {
                 "type": "string"
               },
               "imatgeVideoFi": {
@@ -644,9 +647,6 @@
               "visitants": {
                 "type": "string"
               },
-              "participants": {
-                "type": "string"
-              },
               "videoFi": {
                 "type": "string"
               },
@@ -655,6 +655,24 @@
               },
               "codiInvitacioAlumne": {
                 "type": "uid"
+              },
+              "criteriAvaluacioBe": {
+                "type": "string"
+              },
+              "criteriAvaluacioFluix": {
+                "type": "string"
+              },
+              "criteriAvaluacioNoAssolit": {
+                "type": "string"
+              },
+              "alumnes": {
+                "type": "string"
+              },
+              "professors": {
+                "type": "string"
+              },
+              "esPrivada": {
+                "type": "boolean"
               }
             }
           },
@@ -699,6 +717,9 @@
                 "type": "string"
               },
               "imatgePerfil": {
+                "type": "string"
+              },
+              "dataNaixement": {
                 "type": "string"
               },
               "organitzacions": {

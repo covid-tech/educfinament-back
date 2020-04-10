@@ -43,7 +43,7 @@
     "materials": {
       "type": "text"
     },
-    "criterisAvaluacio": {
+    "criteriAvaluacioMoltBe": {
       "type": "text"
     },
     "imatgeVideoFi": {
@@ -62,21 +62,34 @@
       "plugin": "users-permissions",
       "collection": "user"
     },
-    "participants": {
-      "collection": "rol-participant-activitat"
-    },
     "videoFi": {
       "model": "video"
     },
     "codiInvitacioProfessor": {
-      "type": "uid",
-      "minLength": 6,
-      "maxLength": 6
+      "type": "uid"
     },
     "codiInvitacioAlumne": {
-      "type": "uid",
-      "maxLength": 6,
-      "minLength": 6
+      "type": "uid"
+    },
+    "criteriAvaluacioBe": {
+      "type": "text"
+    },
+    "criteriAvaluacioFluix": {
+      "type": "text"
+    },
+    "criteriAvaluacioNoAssolit": {
+      "type": "string"
+    },
+    "alumnes": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "professors": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "esPrivada": {
+      "type": "boolean"
     }
   }
 }

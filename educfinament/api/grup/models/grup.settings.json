@@ -19,7 +19,11 @@
       "unique": true,
       "collection": "activitat"
     },
-    "participants": {
+    "alumnes": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "professors": {
       "plugin": "users-permissions",
       "collection": "user"
     }

@@ -7,12 +7,12 @@
 
 module.exports = {
     async find(ctx) {
-        return await strapi.query("activitat").find({}, ['videos', 'participants','participants.rol','participants.participant']);
+        return await strapi.query("activitat").find({}, ['videos', 'alumne','alumne.rol','alumne.participant', 'professor','professor.rol','professor.participant']);
     }, 
 
     async findOne(ctx) {
         //return ctx.req.params
-        return await strapi.query("activitat").findOne({id:ctx.params.id}, ['videos','participants','participants.rol','participants.participant']);
+        return await strapi.query("activitat").findOne({id:ctx.params.id}, ['videos','alumne','alumne.rol','alumne.participant', 'professor','professor.rol','professor.participant']);
     },
 
     async create(ctx) {
@@ -49,11 +49,15 @@ module.exports = {
             color: ctx.request.body.color,
             imatgeVideoInici: ctx.request.body.imatgeVideoInici,
             materials: ctx.request.body.materials,
-            criterisAvaluacio: ctx.request.body.criterisAvaluacio,
+            criteriAvaluacioMoltBe: ctx.request.body.criteriAvaluacioMoltBe,
+            criteriAvaluacioBe: ctx.request.body.criteriAvaluacioBe,
+            criteriAvaluacioFluix: ctx.request.body.criteriAvaluacioFluix,
+            criteriAvaluacioNoAssolit: ctx.request.body.criteriAvaluacioNoAssolit,
             videoFi: ctx.request.body.videoFi,
             imatgeVideoFi: ctx.request.body.imatgeVideoFi,
             observacionsFi: ctx.request.body.observacionsFi,
             calValidacio: ctx.request.body.calValidacio,
+            esPrivada: ctx.request.body.esPrivada,
             copsVista: ctx.request.body.copsVista
         }
 
@@ -79,21 +83,7 @@ module.exports = {
         });
     },
 
-    async guardaNouConvidatActivitat(rol, act, usuari, ctx) {
-        let participant = await strapi.query("rol-participant-activitat").findOne({activitat:act.id, participant: usuari, rol: rol.id})
-        if(participant == null || participant == undefined) {
-            return await strapi.query("rol-participant-activitat").create({activitat:act.id, participant: usuari, rol: rol.id})
-            .then(async pra => {
-                if(act.participants == null || act.participants == undefined) act.participants = [];
-                act.participants.push(pra);
-                return await strapi.services.activitat.update({id:act.id}, act);
-            });
-        } else ctx.response.badRequest("Usuari ja participant");
-    },
-
     async apuntaActivitat(ctx) {
-        let rol = null;
-
         return await strapi.services.activitat.findOne({'codiInvitacioAlumne':ctx.request.body.codiInvitacio})
         .then(async act => {
             // Si entre IF potser es Professor, sino és alumne
@@ -102,13 +92,13 @@ module.exports = {
                 .then(async act => {
                     if(act == null || act == undefined) ctx.response.badRequest("No s'ha trobat l'activitat");        
                     else {
-                        rol = await strapi.query('role', 'users-permissions').findOne({name:'Professor'});
-                        return await this.guardaNouConvidatActivitat(rol, act, ctx.request.body.usuari, ctx);
+                        if(act.professors == null || act.professors == undefined) act.professors = [];
+                        act.professors.push(ctx.request.body.usuari);
                     }
                 });                
             } else {
-                rol = await strapi.query('role', 'users-permissions').findOne({name:'Alumne'});
-                return await this.guardaNouConvidatActivitat(rol, act, ctx.request.body.usuari, ctx);
+                if(act.alumnes == null || act.alumnes == undefined) act.alumnes = [];
+                act.alumnes.push(ctx.request.body.usuari);
             }
         });
     }
