@@ -5,4 +5,20 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    async update(ctx) {
+
+        let dadesUpdate = {
+            descripcio: ctx.request.body.descripcio,
+            validat: ctx.request.body.validat,
+            dataPublicacio: ctx.request.body.dataPublicacio,
+            copsVist: ctx.request.body.copsVist
+        }
+
+        return await strapi.services.video.update(
+          {id:ctx.params.id},
+          dadesUpdate
+        )
+        .then(vid => { return vid; })
+    }
+};

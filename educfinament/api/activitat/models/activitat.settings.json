@@ -63,8 +63,7 @@
       "collection": "user"
     },
     "participants": {
-      "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "rol-participant-activitat"
     },
     "videoFi": {
       "model": "video"

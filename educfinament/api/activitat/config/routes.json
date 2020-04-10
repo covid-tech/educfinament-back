@@ -33,6 +33,22 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/activitats/:id/videos/:tipus",
+      "handler": "activitat.pujaVideoActivitat",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/activitats/apuntaActivitat",
+      "handler": "activitat.apuntaActivitat",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/activitats/:id",
       "handler": "activitat.update",

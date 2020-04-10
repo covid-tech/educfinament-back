@@ -16,9 +16,9 @@
       "unique": true
     },
     "participants": {
+      "via": "organitzacions",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "organitzacions",
       "dominant": true
     },
     "grups": {
