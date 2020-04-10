@@ -34,9 +34,7 @@ module.exports = {
     },
 
     async registre(ctx) {
-        let rol;
-        if(ctx.request.body.esProfessor) rol = await strapi.query('role', 'users-permissions').findOne({name:'Professor'},['name']);
-        else rol = await strapi.query('role', 'users-permissions').findOne({name:'Alumne'},['name']);
+        let rol = await strapi.query('role', 'users-permissions').findOne({name:'Participant'},['name']);
 
         ctx.request.body.role = rol;
 
