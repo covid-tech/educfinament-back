@@ -23,6 +23,10 @@
   },
   "servers": [
     {
+      "url": "http://educfinament.albiasoft.com:1337",
+      "description": "Albia server"
+    },
+    {
       "url": "http://localhost:1337",
       "description": "Development server"
     },
