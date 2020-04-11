@@ -22,6 +22,7 @@
       "dominant": true
     },
     "grups": {
+      "via": "organitzacio",
       "collection": "grup"
     },
     "professors": {

@@ -69,6 +69,22 @@
     "organitzacions": {
       "via": "professors",
       "collection": "organitzacio"
+    },
+    "alumneGrups": {
+      "via": "alumnes",
+      "collection": "grup"
+    },
+    "professorGrups": {
+      "via": "professors",
+      "collection": "grup"
+    },
+    "alumneActivitats": {
+      "via": "alumnes",
+      "collection": "activitat"
+    },
+    "professorActivitats": {
+      "via": "professors",
+      "collection": "activitat"
     }
   }
 }

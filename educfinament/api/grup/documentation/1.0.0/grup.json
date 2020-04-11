@@ -604,10 +604,16 @@
                 "type": "string"
               },
               "alumnes": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "professors": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "esPrivada": {
                 "type": "boolean"
@@ -615,100 +621,186 @@
             }
           },
           "alumnes": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "nom": {
-                "type": "string"
-              },
-              "imatgePerfil": {
-                "type": "string"
-              },
-              "dataNaixement": {
-                "type": "string"
-              },
-              "organitzacions": {
-                "type": "array",
-                "items": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "dataNaixement": {
+                  "type": "string"
+                },
+                "organitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alumneGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alumneActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
           },
           "professors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "dataNaixement": {
+                  "type": "string"
+                },
+                "organitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alumneGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alumneActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "organitzacio": {
             "required": [
               "id",
-              "username",
-              "email"
+              "nom"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
               "nom": {
                 "type": "string"
               },
-              "imatgePerfil": {
-                "type": "string"
+              "alumnes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "dataNaixement": {
-                "type": "string"
+              "grups": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "organitzacions": {
+              "professors": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -730,9 +822,18 @@
             "type": "string"
           },
           "alumnes": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "professors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "organitzacio": {
             "type": "string"
           }
         }

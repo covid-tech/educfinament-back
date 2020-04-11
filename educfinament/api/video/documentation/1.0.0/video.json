@@ -582,6 +582,30 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "alumneGrups": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorGrups": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "alumneActivitats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorActivitats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -666,10 +690,16 @@
                 "type": "string"
               },
               "alumnes": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "professors": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "esPrivada": {
                 "type": "boolean"
@@ -723,6 +753,30 @@
                 "type": "string"
               },
               "organitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "alumneGrups": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorGrups": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "alumneActivitats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorActivitats": {
                 "type": "array",
                 "items": {
                   "type": "string"

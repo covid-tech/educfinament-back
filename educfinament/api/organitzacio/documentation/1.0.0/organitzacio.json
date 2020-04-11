@@ -576,30 +576,66 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "alumneGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alumneActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
           },
           "grups": {
-            "required": [
-              "id",
-              "nom"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nom": {
-                "type": "string"
-              },
-              "activitats": {
-                "type": "string"
-              },
-              "alumnes": {
-                "type": "string"
-              },
-              "professors": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nom"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "activitats": {
+                  "type": "string"
+                },
+                "alumnes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "organitzacio": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -653,6 +689,30 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "alumneGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorGrups": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "alumneActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -674,7 +734,10 @@
             }
           },
           "grups": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "professors": {
             "type": "array",

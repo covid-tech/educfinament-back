@@ -21,11 +21,19 @@
     },
     "alumnes": {
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "alumneGrups",
+      "dominant": true
     },
     "professors": {
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "professorGrups",
+      "dominant": true
+    },
+    "organitzacio": {
+      "model": "organitzacio",
+      "via": "grups"
     }
   }
 }

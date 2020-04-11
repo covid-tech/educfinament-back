@@ -82,11 +82,15 @@
     },
     "alumnes": {
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "alumneActivitats",
+      "dominant": true
     },
     "professors": {
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "professorActivitats",
+      "dominant": true
     },
     "esPrivada": {
       "type": "boolean"

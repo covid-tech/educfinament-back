@@ -1318,13 +1318,280 @@
                   }
                 },
                 "grups": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "professors": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "alumneGrups": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nom"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "activitats": {
+                  "type": "string"
+                },
+                "alumnes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "organitzacio": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "professorGrups": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nom"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "activitats": {
+                  "type": "string"
+                },
+                "alumnes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "organitzacio": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "alumneActivitats": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "titol": {
+                  "type": "string"
+                },
+                "objectius": {
+                  "type": "string"
+                },
+                "videos": {
+                  "type": "string"
+                },
+                "videoInici": {
+                  "type": "string"
+                },
+                "dataPublicacio": {
+                  "type": "datetime"
+                },
+                "dataFinalitzacio": {
+                  "type": "datetime"
+                },
+                "publicada": {
+                  "type": "boolean"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "grup": {
+                  "type": "string"
+                },
+                "imatgeVideoInici": {
+                  "type": "string"
+                },
+                "materials": {
+                  "type": "string"
+                },
+                "criteriAvaluacioMoltBe": {
+                  "type": "string"
+                },
+                "imatgeVideoFi": {
+                  "type": "string"
+                },
+                "observacionsFi": {
+                  "type": "string"
+                },
+                "calValidacio": {
+                  "type": "boolean"
+                },
+                "copsVista": {
+                  "type": "integer"
+                },
+                "visitants": {
+                  "type": "string"
+                },
+                "videoFi": {
+                  "type": "string"
+                },
+                "codiInvitacioProfessor": {
+                  "type": "uid"
+                },
+                "codiInvitacioAlumne": {
+                  "type": "uid"
+                },
+                "criteriAvaluacioBe": {
+                  "type": "string"
+                },
+                "criteriAvaluacioFluix": {
+                  "type": "string"
+                },
+                "criteriAvaluacioNoAssolit": {
+                  "type": "string"
+                },
+                "alumnes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "esPrivada": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "professorActivitats": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "titol": {
+                  "type": "string"
+                },
+                "objectius": {
+                  "type": "string"
+                },
+                "videos": {
+                  "type": "string"
+                },
+                "videoInici": {
+                  "type": "string"
+                },
+                "dataPublicacio": {
+                  "type": "datetime"
+                },
+                "dataFinalitzacio": {
+                  "type": "datetime"
+                },
+                "publicada": {
+                  "type": "boolean"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "grup": {
+                  "type": "string"
+                },
+                "imatgeVideoInici": {
+                  "type": "string"
+                },
+                "materials": {
+                  "type": "string"
+                },
+                "criteriAvaluacioMoltBe": {
+                  "type": "string"
+                },
+                "imatgeVideoFi": {
+                  "type": "string"
+                },
+                "observacionsFi": {
+                  "type": "string"
+                },
+                "calValidacio": {
+                  "type": "boolean"
+                },
+                "copsVista": {
+                  "type": "integer"
+                },
+                "visitants": {
+                  "type": "string"
+                },
+                "videoFi": {
+                  "type": "string"
+                },
+                "codiInvitacioProfessor": {
+                  "type": "uid"
+                },
+                "codiInvitacioAlumne": {
+                  "type": "uid"
+                },
+                "criteriAvaluacioBe": {
+                  "type": "string"
+                },
+                "criteriAvaluacioFluix": {
+                  "type": "string"
+                },
+                "criteriAvaluacioNoAssolit": {
+                  "type": "string"
+                },
+                "alumnes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "esPrivada": {
+                  "type": "boolean"
                 }
               }
             }
@@ -1373,6 +1640,30 @@
             "type": "string"
           },
           "organitzacions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "alumneGrups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "professorGrups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "alumneActivitats": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "professorActivitats": {
             "type": "array",
             "items": {
               "type": "string"
