@@ -11,11 +11,14 @@ module.exports = {
     }, 
 
     async findOne(ctx) {
-        //return ctx.req.params
         return await strapi.query("activitat").findOne({id:ctx.params.id}, [
-            'videos','videoInici','videoFi','alumne','alumne.rol','alumne.participant', 'professor','professor.rol','professor.participant',
+            'videos','videoInici','videoFi','alumnes', 'professors',
             'videos.enviatPer', 'videoInici.enviatPer', 'videoFi.enviatPer'
-        ]);
+        ]).then(act => {
+            let idAct = act.professors.findIndex(x => x.id == ctx.state.user.id);
+            act.socProfessor = idAct > -1;
+            return act;
+        });
     },
 
     async create(ctx) {
