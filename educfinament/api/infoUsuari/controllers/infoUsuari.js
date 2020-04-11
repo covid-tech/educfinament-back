@@ -52,6 +52,7 @@ module.exports = {
             "alumneActivitats.grup.organitzacio","professorActivitats.grup.organitzacio",
             "alumneActivitats.videos","alumneActivitats.videoInici",
             "professorActivitats.videos","professorActivitats.videoInici",
+            "alumneActivitats.videos.enviatPer","professorActivitats.videos.enviatPer",
         ]).then(async user => {
             //console.log(user);
             let jerarquiaUsuari = [];
