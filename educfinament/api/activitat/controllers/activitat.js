@@ -12,7 +12,10 @@ module.exports = {
 
     async findOne(ctx) {
         //return ctx.req.params
-        return await strapi.query("activitat").findOne({id:ctx.params.id}, ['videos','alumne','alumne.rol','alumne.participant', 'professor','professor.rol','professor.participant']);
+        return await strapi.query("activitat").findOne({id:ctx.params.id}, [
+            'videos','videoInici','videoFi','alumne','alumne.rol','alumne.participant', 'professor','professor.rol','professor.participant',
+            'videos.enviatPer', 'videoInici.enviatPer', 'videoFi.enviatPer'
+        ]);
     },
 
     async create(ctx) {
@@ -83,22 +86,46 @@ module.exports = {
         });
     },
 
+    async guardaInvitacioActivitat(act,socProfessor,ctx) {
+        if(socProfessor) act.professors.push(ctx.request.body.usuari);
+        else act.alumnes.push(ctx.request.body.usuari);
+
+        return await strapi.services.activitat.update({id:act.id}, act).then(async newAct => {
+            if(newAct.grup.alumnes == null || newAct.grup.alumnes == undefined)
+                newAct.grup.alumnes = act.grup.alumnes;
+
+            newAct.grup.alumnes.push(ctx.request.body.usuari);
+
+
+            return await strapi.services.grup.update({id:newAct.grup.id}, newAct.grup).then(async newGrup => {
+                if(newGrup.organitzacio.alumnes == null || newGrup.organitzacio.alumnes == undefined)
+                    newGrup.organitzacio.alumnes = act.grup.organitzacio.alumnes;
+
+                newGrup.organitzacio.alumnes.push(ctx.request.body.usuari);
+                await strapi.services.organitzacio.update({id:newGrup.organitzacio.id}, newGrup.organitzacio)
+                return newAct
+            });
+        });
+    },
+
     async apuntaActivitat(ctx) {
-        return await strapi.services.activitat.findOne({'codiInvitacioAlumne':ctx.request.body.codiInvitacio})
-        .then(async act => {
+        return await strapi.services.activitat.findOne({'codiInvitacioAlumne':ctx.request.body.codiInvitacio}, ["professors","alumnes",
+            "grup", "grup.organitzacio", "grup.alumnes", "grup.professores", "grup.organitzacio.alumnes", "grup.organitzacio.professores"
+        ]).then(async act => {
             // Si entre IF potser es Professor, sino és alumne
             if(act == null || act == undefined) {
-                return await strapi.services.activitat.findOne({'codiInvitacioProfessor':ctx.request.body.codiInvitacio})
-                .then(async act => {
+                return await strapi.services.activitat.findOne({'codiInvitacioProfessor':ctx.request.body.codiInvitacio}, ["professors","alumnes",
+                    "grup", "grup.organitzacio", "grup.alumnes", "grup.professores", "grup.organitzacio.alumnes", "grup.organitzacio.professores"
+                ]).then(async act => {
                     if(act == null || act == undefined) ctx.response.badRequest("No s'ha trobat l'activitat");        
                     else {
                         if(act.professors == null || act.professors == undefined) act.professors = [];
-                        act.professors.push(ctx.request.body.usuari);
+                        return await this.guardaInvitacioActivitat(act,true,ctx); 
                     }
                 });                
             } else {
                 if(act.alumnes == null || act.alumnes == undefined) act.alumnes = [];
-                act.alumnes.push(ctx.request.body.usuari);
+                return await this.guardaInvitacioActivitat(act,false,ctx); 
             }
         });
     }

@@ -670,43 +670,6 @@
           "objectius": {
             "type": "string"
           },
-          "videos": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "descripcio": {
-                "type": "string"
-              },
-              "urlVideo": {
-                "type": "string"
-              },
-              "urlThumbnail": {
-                "type": "string"
-              },
-              "validat": {
-                "type": "boolean"
-              },
-              "enviatPer": {
-                "type": "string"
-              },
-              "dataPublicacio": {
-                "type": "datetime"
-              },
-              "activitat": {
-                "type": "string"
-              },
-              "copsVist": {
-                "type": "integer"
-              },
-              "visitants": {
-                "type": "string"
-              }
-            }
-          },
           "videoInici": {
             "required": [
               "id"
@@ -733,13 +696,13 @@
               "dataPublicacio": {
                 "type": "datetime"
               },
-              "activitat": {
-                "type": "string"
-              },
               "copsVist": {
                 "type": "integer"
               },
               "visitants": {
+                "type": "string"
+              },
+              "activitat": {
                 "type": "string"
               }
             }
@@ -846,17 +809,8 @@
               "nom": {
                 "type": "string"
               },
-              "imatgePerfil": {
-                "type": "string"
-              },
               "dataNaixement": {
                 "type": "string"
-              },
-              "organitzacions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "alumneGrups": {
                 "type": "array",
@@ -877,6 +831,21 @@
                 }
               },
               "professorActivitats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "imatgePerfil": {
+                "type": "string"
+              },
+              "alumneOrganitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorOrganitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -910,13 +879,13 @@
               "dataPublicacio": {
                 "type": "datetime"
               },
-              "activitat": {
-                "type": "string"
-              },
               "copsVist": {
                 "type": "integer"
               },
               "visitants": {
+                "type": "string"
+              },
+              "activitat": {
                 "type": "string"
               }
             }
@@ -975,17 +944,8 @@
                 "nom": {
                   "type": "string"
                 },
-                "imatgePerfil": {
-                  "type": "string"
-                },
                 "dataNaixement": {
                   "type": "string"
-                },
-                "organitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "alumneGrups": {
                   "type": "array",
@@ -1006,6 +966,21 @@
                   }
                 },
                 "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "alumneOrganitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorOrganitzacions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -1053,17 +1028,8 @@
                 "nom": {
                   "type": "string"
                 },
-                "imatgePerfil": {
-                  "type": "string"
-                },
                 "dataNaixement": {
                   "type": "string"
-                },
-                "organitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "alumneGrups": {
                   "type": "array",
@@ -1088,12 +1054,70 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "alumneOrganitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorOrganitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
           },
           "esPrivada": {
             "type": "boolean"
+          },
+          "descripcio": {
+            "type": "string"
+          },
+          "videos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "descripcio": {
+                  "type": "string"
+                },
+                "urlVideo": {
+                  "type": "string"
+                },
+                "urlThumbnail": {
+                  "type": "string"
+                },
+                "validat": {
+                  "type": "boolean"
+                },
+                "enviatPer": {
+                  "type": "string"
+                },
+                "dataPublicacio": {
+                  "type": "datetime"
+                },
+                "copsVist": {
+                  "type": "integer"
+                },
+                "visitants": {
+                  "type": "string"
+                },
+                "activitat": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1103,9 +1127,6 @@
             "type": "string"
           },
           "objectius": {
-            "type": "string"
-          },
-          "videos": {
             "type": "string"
           },
           "videoInici": {
@@ -1182,6 +1203,15 @@
           },
           "esPrivada": {
             "type": "boolean"
+          },
+          "descripcio": {
+            "type": "string"
+          },
+          "videos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

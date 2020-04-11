@@ -20,20 +20,20 @@
       "collection": "activitat"
     },
     "alumnes": {
+      "via": "alumneGrups",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "alumneGrups",
       "dominant": true
     },
     "professors": {
+      "via": "professorGrups",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "professorGrups",
       "dominant": true
     },
     "organitzacio": {
-      "model": "organitzacio",
-      "via": "grups"
+      "via": "grups",
+      "model": "organitzacio"
     }
   }
 }
