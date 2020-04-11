@@ -18,17 +18,17 @@
     "alumnes": {
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "organitzacions",
+      "via": "alumneOrganitzacions",
       "dominant": true
     },
     "grups": {
-      "via": "organitzacio",
-      "collection": "grup"
+      "collection": "grup",
+      "via": "organitzacio"
     },
     "professors": {
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "organitzacions",
+      "via": "professorOrganitzacions",
       "dominant": true
     }
   }

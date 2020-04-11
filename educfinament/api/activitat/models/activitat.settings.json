@@ -16,9 +16,6 @@
     "objectius": {
       "type": "text"
     },
-    "videos": {
-      "collection": "video"
-    },
     "videoInici": {
       "model": "video"
     },
@@ -94,6 +91,13 @@
     },
     "esPrivada": {
       "type": "boolean"
+    },
+    "descripcio": {
+      "type": "text"
+    },
+    "videos": {
+      "collection": "video",
+      "via": "activitat"
     }
   }
 }

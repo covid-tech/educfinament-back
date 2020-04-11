@@ -565,17 +565,8 @@
                 "nom": {
                   "type": "string"
                 },
-                "imatgePerfil": {
-                  "type": "string"
-                },
                 "dataNaixement": {
                   "type": "string"
-                },
-                "organitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "alumneGrups": {
                   "type": "array",
@@ -596,6 +587,21 @@
                   }
                 },
                 "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "alumneOrganitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorOrganitzacions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -678,17 +684,8 @@
                 "nom": {
                   "type": "string"
                 },
-                "imatgePerfil": {
-                  "type": "string"
-                },
                 "dataNaixement": {
                   "type": "string"
-                },
-                "organitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "alumneGrups": {
                   "type": "array",
@@ -709,6 +706,21 @@
                   }
                 },
                 "professorActivitats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "imatgePerfil": {
+                  "type": "string"
+                },
+                "alumneOrganitzacions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "professorOrganitzacions": {
                   "type": "array",
                   "items": {
                     "type": "string"

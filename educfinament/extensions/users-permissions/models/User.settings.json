@@ -57,26 +57,16 @@
     "nom": {
       "type": "string"
     },
-    "imatgePerfil": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
     "dataNaixement": {
       "type": "date"
     },
-    "organitzacions": {
-      "via": "professors",
-      "collection": "organitzacio"
-    },
     "alumneGrups": {
-      "via": "alumnes",
-      "collection": "grup"
+      "collection": "grup",
+      "via": "alumnes"
     },
     "professorGrups": {
-      "via": "professors",
-      "collection": "grup"
+      "collection": "grup",
+      "via": "professors"
     },
     "alumneActivitats": {
       "via": "alumnes",
@@ -85,6 +75,17 @@
     "professorActivitats": {
       "via": "professors",
       "collection": "activitat"
+    },
+    "imatgePerfil": {
+      "type": "string"
+    },
+    "alumneOrganitzacions": {
+      "via": "alumnes",
+      "collection": "organitzacio"
+    },
+    "professorOrganitzacions": {
+      "via": "professors",
+      "collection": "organitzacio"
     }
   }
 }
