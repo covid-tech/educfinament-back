@@ -17,7 +17,7 @@ module.exports = {
             return response.data;
         })
         .catch(error => {
-            return error;
+            ctx.response.badRequest("Usuari o Contrasenya incorrectes");
         });
     },
 
