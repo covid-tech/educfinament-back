@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/11/2020 4:06:45 PM"
+    "x-generation-date": "04/12/2020 12:02:08 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -22,10 +22,6 @@
     "generateDefaultResponse": true
   },
   "servers": [
-    {
-      "url": "http://educfinament.albiasoft.com:1337",
-      "description": "Albia server"
-    },
     {
       "url": "http://localhost:1337",
       "description": "Development server"
@@ -4651,6 +4647,9 @@
               },
               "activitat": {
                 "type": "string"
+              },
+              "avaluacio": {
+                "type": "integer"
               }
             }
           },
@@ -4834,6 +4833,9 @@
               },
               "activitat": {
                 "type": "string"
+              },
+              "avaluacio": {
+                "type": "integer"
               }
             }
           },
@@ -5062,6 +5064,9 @@
                 },
                 "activitat": {
                   "type": "string"
+                },
+                "avaluacio": {
+                  "type": "integer"
                 }
               }
             }
@@ -6036,6 +6041,9 @@
                 }
               }
             }
+          },
+          "avaluacio": {
+            "type": "integer"
           }
         }
       },
@@ -6067,6 +6075,9 @@
           },
           "activitat": {
             "type": "string"
+          },
+          "avaluacio": {
+            "type": "integer"
           }
         }
       },

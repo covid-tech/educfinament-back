@@ -801,6 +801,9 @@
                 }
               }
             }
+          },
+          "avaluacio": {
+            "type": "integer"
           }
         }
       },
@@ -832,6 +835,9 @@
           },
           "activitat": {
             "type": "string"
+          },
+          "avaluacio": {
+            "type": "integer"
           }
         }
       }

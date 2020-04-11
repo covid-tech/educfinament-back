@@ -96,8 +96,8 @@
       "type": "text"
     },
     "videos": {
-      "collection": "video",
-      "via": "activitat"
+      "via": "activitat",
+      "collection": "video"
     }
   }
 }
