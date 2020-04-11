@@ -12,7 +12,7 @@ module.exports = {
 
     async findOne(ctx) {
         return await strapi.query("activitat").findOne({id:ctx.params.id}, [
-            'videos','videoInici','videoFi','alumnes', 'professors',
+            'videos','videoInici','videoFi','alumnes', 'professors', 'grup',
             'videos.enviatPer', 'videoInici.enviatPer', 'videoFi.enviatPer'
         ]).then(act => {
             let idAct = act.professors.findIndex(x => x.id == ctx.state.user.id);
