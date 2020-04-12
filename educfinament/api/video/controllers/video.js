@@ -12,7 +12,8 @@ module.exports = {
             descripcio: ctx.request.body.descripcio,
             validat: ctx.request.body.validat,
             dataPublicacio: ctx.request.body.dataPublicacio,
-            copsVist: ctx.request.body.copsVist
+            copsVist: ctx.request.body.copsVist,
+            avaluacio: ctx.request.body.avaluacio
         }
 
         return await strapi.services.video.update(

@@ -37,8 +37,8 @@
       "collection": "user"
     },
     "activitat": {
-      "model": "activitat",
-      "via": "videos"
+      "via": "videos",
+      "model": "activitat"
     },
     "avaluacio": {
       "type": "integer"
