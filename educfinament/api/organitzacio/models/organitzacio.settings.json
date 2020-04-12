@@ -22,8 +22,8 @@
       "dominant": true
     },
     "grups": {
-      "collection": "grup",
-      "via": "organitzacio"
+      "via": "organitzacio",
+      "collection": "grup"
     },
     "professors": {
       "plugin": "users-permissions",

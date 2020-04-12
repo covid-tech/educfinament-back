@@ -13,27 +13,27 @@
     "nom": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "activitats": {
       "unique": true,
       "collection": "activitat"
     },
     "alumnes": {
-      "via": "alumneGrups",
       "plugin": "users-permissions",
       "collection": "user",
+      "via": "alumneGrups",
       "dominant": true
     },
     "professors": {
-      "via": "professorGrups",
       "plugin": "users-permissions",
       "collection": "user",
+      "via": "professorGrups",
       "dominant": true
     },
     "organitzacio": {
-      "via": "grups",
-      "model": "organitzacio"
+      "model": "organitzacio",
+      "via": "grups"
     }
   }
 }

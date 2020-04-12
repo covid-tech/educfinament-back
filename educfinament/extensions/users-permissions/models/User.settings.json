@@ -61,12 +61,12 @@
       "type": "date"
     },
     "alumneGrups": {
-      "collection": "grup",
-      "via": "alumnes"
+      "via": "alumnes",
+      "collection": "grup"
     },
     "professorGrups": {
-      "collection": "grup",
-      "via": "professors"
+      "via": "professors",
+      "collection": "grup"
     },
     "alumneActivitats": {
       "via": "alumnes",
