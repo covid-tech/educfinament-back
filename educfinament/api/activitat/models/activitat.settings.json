@@ -75,7 +75,7 @@
       "type": "text"
     },
     "criteriAvaluacioNoAssolit": {
-      "type": "string"
+      "type": "text"
     },
     "alumnes": {
       "plugin": "users-permissions",
@@ -96,8 +96,8 @@
       "type": "text"
     },
     "videos": {
-      "via": "activitat",
-      "collection": "video"
+      "collection": "video",
+      "via": "activitat"
     }
   }
 }
