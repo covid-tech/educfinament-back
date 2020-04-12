@@ -71,12 +71,10 @@ module.exports = {
         }
 
         return await strapi.services.activitat.findOne({'id':ctx.params.id}).then(async oldAct => {
-            if(!oldAct.publicada && dadesUpdate.publicada && (oldAct.dataPublicacio == null || oldAct.dataPublicacio == undefined)) {
-                dadesUpdate.dataPublicacio = new Date();
-                dadesUpdate.dataFinalitzacio = null;
-            } else if(oldAct.publicada && !dadesUpdate.publicada) {
-                dadesUpdate.dataFinalitzacio = new Date();
-            }
+            if(!oldAct.publicada && dadesUpdate.publicada && (oldAct.dataPublicacio == null || oldAct.dataPublicacio == undefined)) dadesUpdate.dataPublicacio = new Date();
+            
+            if(!oldAct.publicada && dadesUpdate.publicada) dadesUpdate.dataFinalitzacio = null;
+            else if(oldAct.publicada && !dadesUpdate.publicada) dadesUpdate.dataFinalitzacio = new Date();           
             
             return await strapi.services.activitat.update({id:ctx.params.id},dadesUpdate)
         })
