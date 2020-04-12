@@ -73,6 +73,7 @@ module.exports = {
         return await strapi.services.activitat.findOne({'id':ctx.params.id}).then(async oldAct => {
             if(!oldAct.publicada && dadesUpdate.publicada && (oldAct.dataPublicacio == null || oldAct.dataPublicacio == undefined)) {
                 dadesUpdate.dataPublicacio = new Date();
+                dadesUpdate.dataFinalitzacio = null;
             } else if(oldAct.publicada && !dadesUpdate.publicada) {
                 dadesUpdate.dataFinalitzacio = new Date();
             }
@@ -80,6 +81,22 @@ module.exports = {
             return await strapi.services.activitat.update({id:ctx.params.id},dadesUpdate)
         })
         .then(act => { return act; })
+    },
+
+    async incrementaVisites(ctx) {
+        return await strapi.services.activitat.findOne({'id':ctx.params.id}).then(async act => {
+            let registreVisita = {usuari: ctx.state.user.id, dataVisita: new Date()};
+
+            return await strapi.query("registre-visita").create(registreVisita)
+            .then(async newReg => {
+                act.copsVist += 1;
+                if(act.registresVisita == null || act.registresVisita == undefined) act.registresVisita = [];
+                act.registresVisita.push(newReg);
+                await strapi.services.activitat.update({id:ctx.params.id},act);
+
+                return true;
+            });
+        });
     },
 
     async pujaVideoActivitat(ctx) {
