@@ -1376,7 +1376,7 @@
                 "copsVista": {
                   "type": "integer"
                 },
-                "registresVisites": {
+                "registresVisita": {
                   "type": "string"
                 },
                 "videoFi": {
@@ -1479,7 +1479,7 @@
                 "copsVista": {
                   "type": "integer"
                 },
-                "registresVisites": {
+                "registresVisita": {
                   "type": "string"
                 },
                 "videoFi": {

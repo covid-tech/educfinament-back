@@ -55,7 +55,7 @@
     "copsVista": {
       "type": "integer"
     },
-    "registresVisites": {
+    "registresVisita": {
       "collection": "registre-visita"
     },
     "videoFi": {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/12/2020 4:53:04 PM"
+    "x-generation-date": "04/12/2020 6:00:45 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5384,7 +5384,7 @@
           "copsVista": {
             "type": "integer"
           },
-          "registresVisites": {
+          "registresVisita": {
             "required": [
               "id"
             ],
@@ -5721,7 +5721,7 @@
           "copsVista": {
             "type": "integer"
           },
-          "registresVisites": {
+          "registresVisita": {
             "type": "string"
           },
           "videoFi": {
@@ -5833,7 +5833,7 @@
               "copsVista": {
                 "type": "integer"
               },
-              "registresVisites": {
+              "registresVisita": {
                 "type": "string"
               },
               "videoFi": {
@@ -6635,7 +6635,7 @@
               "copsVista": {
                 "type": "integer"
               },
-              "registresVisites": {
+              "registresVisita": {
                 "type": "string"
               },
               "videoFi": {
@@ -7082,7 +7082,7 @@
                 "copsVista": {
                   "type": "integer"
                 },
-                "registresVisites": {
+                "registresVisita": {
                   "type": "string"
                 },
                 "videoFi": {
@@ -7185,7 +7185,7 @@
                 "copsVista": {
                   "type": "integer"
                 },
-                "registresVisites": {
+                "registresVisita": {
                   "type": "string"
                 },
                 "videoFi": {

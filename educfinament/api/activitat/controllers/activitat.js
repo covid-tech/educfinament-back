@@ -87,7 +87,7 @@ module.exports = {
 
             return await strapi.query("registre-visita").create(registreVisita)
             .then(async newReg => {
-                act.copsVist += 1;
+                act.copsVista += 1;
                 if(act.registresVisita == null || act.registresVisita == undefined) act.registresVisita = [];
                 act.registresVisita.push(newReg);
                 await strapi.services.activitat.update({id:ctx.params.id},act);
