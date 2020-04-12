@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "registre_visitas",
+  "info": {
+    "name": "RegistreVisita"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "usuari": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "dataVisita": {
+      "type": "datetime"
+    }
+  }
+}

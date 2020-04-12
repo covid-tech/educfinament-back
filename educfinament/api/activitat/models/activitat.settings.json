@@ -55,9 +55,8 @@
     "copsVista": {
       "type": "integer"
     },
-    "visitants": {
-      "plugin": "users-permissions",
-      "collection": "user"
+    "registresVisites": {
+      "collection": "registre-visita"
     },
     "videoFi": {
       "model": "video"

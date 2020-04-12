@@ -40,6 +40,9 @@ module.exports = {
 
         ctx.request.body.codiInvitacioAlumne = codiAlumne.toString();
         ctx.request.body.codiInvitacioProfessor = codiProfessor.toString();
+
+        if(ctx.request.body.publicada) ctx.request.dataPublicacio = new Date();
+
         console.log(ctx.request.body);
         return await strapi.services.activitat.create(ctx.request.body);
     },
@@ -67,10 +70,15 @@ module.exports = {
             copsVista: ctx.request.body.copsVista
         }
 
-        return await strapi.services.activitat.update(
-          {id:ctx.params.id},
-          dadesUpdate
-        )
+        return await strapi.services.activitat.findOne({'id':ctx.params.id}).then(async oldAct => {
+            if(!oldAct.publicada && dadesUpdate.publicada && (oldAct.dataPublicacio == null || oldAct.dataPublicacio == undefined)) {
+                dadesUpdate.dataPublicacio = new Date();
+            } else if(oldAct.publicada && !dadesUpdate.publicada) {
+                dadesUpdate.dataFinalitzacio = new Date();
+            }
+            
+            return await strapi.services.activitat.update({id:ctx.params.id},dadesUpdate)
+        })
         .then(act => { return act; })
     },
 

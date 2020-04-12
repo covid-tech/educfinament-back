@@ -21,5 +21,21 @@ module.exports = {
           dadesUpdate
         )
         .then(vid => { return vid; })
+    },
+
+    async incrementaVisites(ctx) {
+        return await strapi.services.video.findOne({'id':ctx.params.id}).then(async vid => {
+            let registreVisita = {usuari: ctx.state.user.id, dataVisita: new Date()};
+
+            return await strapi.query("registre-visita").create(registreVisita)
+            .then(async newReg => {
+                vid.copsVist += 1;
+                if(vid.registresVisita == null || vid.registresVisita == undefined) vid.registresVisita = [];
+                vid.registresVisita.push(newReg);
+                await strapi.services.video.update({id:ctx.params.id},vid);
+
+                return true;
+            });
+        });
     }
 };

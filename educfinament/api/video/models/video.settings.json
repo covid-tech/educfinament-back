@@ -32,9 +32,8 @@
     "copsVist": {
       "type": "integer"
     },
-    "visitants": {
-      "plugin": "users-permissions",
-      "collection": "user"
+    "registresVisita": {
+      "collection": "registre-visita"
     },
     "activitat": {
       "via": "videos",

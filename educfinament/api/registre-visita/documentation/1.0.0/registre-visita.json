@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/grups": {
+    "/registre-visitas": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Grup"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Grup"
+          "Registre-visita"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Grup"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Grup"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewGrup"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/grups/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Grup"
+          "Registre-visita"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewRegistre-visita"
+              }
+            }
+          }
+        }
       }
     },
-    "/grups/{id}": {
+    "/registre-visitas/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Grup"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Grup"
+          "Registre-visita"
+        ],
+        "parameters": []
+      }
+    },
+    "/registre-visitas/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Registre-visita"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Grup"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Grup"
+          "Registre-visita"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewGrup"
+                "$ref": "#/components/schemas/NewRegistre-visita"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Grup"
+          "Registre-visita"
         ],
         "parameters": [
           {
@@ -514,353 +527,111 @@
   },
   "components": {
     "schemas": {
-      "Grup": {
+      "Registre-visita": {
         "required": [
-          "id",
-          "nom"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "nom": {
-            "type": "string"
-          },
-          "activitats": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "titol": {
-                "type": "string"
-              },
-              "objectius": {
-                "type": "string"
-              },
-              "videoInici": {
-                "type": "string"
-              },
-              "dataPublicacio": {
-                "type": "datetime"
-              },
-              "dataFinalitzacio": {
-                "type": "datetime"
-              },
-              "publicada": {
-                "type": "boolean"
-              },
-              "color": {
-                "type": "string"
-              },
-              "grup": {
-                "type": "string"
-              },
-              "imatgeVideoInici": {
-                "type": "string"
-              },
-              "materials": {
-                "type": "string"
-              },
-              "criteriAvaluacioMoltBe": {
-                "type": "string"
-              },
-              "imatgeVideoFi": {
-                "type": "string"
-              },
-              "observacionsFi": {
-                "type": "string"
-              },
-              "calValidacio": {
-                "type": "boolean"
-              },
-              "copsVista": {
-                "type": "integer"
-              },
-              "registresVisites": {
-                "type": "string"
-              },
-              "videoFi": {
-                "type": "string"
-              },
-              "codiInvitacioProfessor": {
-                "type": "uid"
-              },
-              "codiInvitacioAlumne": {
-                "type": "uid"
-              },
-              "criteriAvaluacioBe": {
-                "type": "string"
-              },
-              "criteriAvaluacioFluix": {
-                "type": "string"
-              },
-              "criteriAvaluacioNoAssolit": {
-                "type": "string"
-              },
-              "alumnes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "professors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "esPrivada": {
-                "type": "boolean"
-              },
-              "descripcio": {
-                "type": "string"
-              },
-              "videos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "alumnes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "nom": {
-                  "type": "string"
-                },
-                "dataNaixement": {
-                  "type": "string"
-                },
-                "alumneGrups": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "professorGrups": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "alumneActivitats": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "professorActivitats": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "imatgePerfil": {
-                  "type": "string"
-                },
-                "alumneOrganitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "professorOrganitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "professors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "nom": {
-                  "type": "string"
-                },
-                "dataNaixement": {
-                  "type": "string"
-                },
-                "alumneGrups": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "professorGrups": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "alumneActivitats": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "professorActivitats": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "imatgePerfil": {
-                  "type": "string"
-                },
-                "alumneOrganitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "professorOrganitzacions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "organitzacio": {
+          "usuari": {
             "required": [
               "id",
-              "nom"
+              "username",
+              "email"
             ],
             "properties": {
               "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
                 "type": "string"
               },
               "nom": {
                 "type": "string"
               },
-              "alumnes": {
+              "dataNaixement": {
+                "type": "string"
+              },
+              "alumneGrups": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "grups": {
+              "professorGrups": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "professors": {
+              "alumneActivitats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorActivitats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "imatgePerfil": {
+                "type": "string"
+              },
+              "alumneOrganitzacions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "professorOrganitzacions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               }
             }
+          },
+          "dataVisita": {
+            "type": "datetime"
           }
         }
       },
-      "NewGrup": {
-        "required": [
-          "nom"
-        ],
+      "NewRegistre-visita": {
         "properties": {
-          "nom": {
+          "usuari": {
             "type": "string"
           },
-          "activitats": {
-            "type": "string"
-          },
-          "alumnes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "professors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "organitzacio": {
-            "type": "string"
+          "dataVisita": {
+            "type": "datetime"
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Grup"
-    }
-  ]
+  "tags": []
 }

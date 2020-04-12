@@ -2,56 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/videos",
-      "handler": "video.find",
+      "path": "/registre-visitas",
+      "handler": "registre-visita.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/videos/count",
-      "handler": "video.count",
+      "path": "/registre-visitas/count",
+      "handler": "registre-visita.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/videos/:id",
-      "handler": "video.findOne",
+      "path": "/registre-visitas/:id",
+      "handler": "registre-visita.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/videos/:id/visites",
-      "handler": "video.incrementaVisites",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/videos",
-      "handler": "video.create",
+      "path": "/registre-visitas",
+      "handler": "registre-visita.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/videos/:id",
-      "handler": "video.update",
+      "path": "/registre-visitas/:id",
+      "handler": "registre-visita.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/videos/:id",
-      "handler": "video.delete",
+      "path": "/registre-visitas/:id",
+      "handler": "registre-visita.delete",
       "config": {
         "policies": []
       }
